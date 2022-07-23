@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      //To hide the menu
+      $(".hidediv").click(function () {
+        $(".men_ex").hide("fast", function () {
+          alert("Menu is hidden!");
+        });
+      });
+      //To show the menu
+      $(".showdiv").click(function () {
+        $(".men_ex").show(2000, function () {
+          alert("Menu is displayed!");
+        });
+      });
+    });
+    $(document).ready(function () {
+      $("#student").click(function () {
+        $(".table_bg").toggle();
+      });
+      //To hide ODD rows
+     $(".hideoddrows").click(function () {
+     $(".table_bg  tr:odd").hide("slow")
+     
+   });
+    //To show ODD rows
+     $(".showoddrows").click(function () {
+     $(".table_bg  tr:odd").show(1000)
+   });   
+   //To hide columns
+   $(".hidecolumn").click(function () {
+    $(".table_bg th:even").hide("fast")
+    $(".table_bg td:even").hide("fast")
+    
+   }) 
+   //show ID & Age  
+   $(".showcolumn").click(function () {
+    $(".table_bg  th:even").show(1000)
+    $(".table_bg  td:even").show(1000)
+    
+   })
+    });
+    
+    $(document).ready(function () {
+      $("#teacher").click(function () {
+        $(".table_bg1").toggle();
+      });
+    });
+
+
+  </script>
+
+
+  <style>
+    .table_bg {
+      width: 40%;
+      font-family: verdana;
+      font-size: 15px;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .table_bg th {
+      background: #0780BA;
+
+      color: #fff;
+      line-height: 35px;
+    }
+
+    .table_bg td {
+      background: #99DBFB;
+      padding: 10px;
+
+      color: #000;
+    }
+  </style>
+
+  <style>
+    .table_bg1 {
+      width: 40%;
+      font-family: verdana;
+      font-size: 15px;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .table_bg1 th {
+      background: #0780BA;
+
+      color: #fff;
+      line-height: 35px;
+    }
+
+    .table_bg1 td {
+      background: #99DBFB;
+      padding: 10px;
+
+      color: #000;
+    }
+  </style>
+  <style>
+    .men_ex {
+      border-radius: 5px;
+    }
+
+    .men_ex ul {
+      margin: 0;
+      padding: 0;
+      width: 185px;
+      list-style-type: none;
+
+    }
+
+    .men_ex ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10.5px 11px;
+      background-color: #3E5F74;
+      display: block;
+      border-bottom: solid 1px #000;
+    }
+
+    .men_ex ul li a:visited {
+      color: white;
+    }
+
+    .men_ex ul li a:hover,
+    .men_ex ul li .current {
+      color: #000;
+      background-color: #B1C7D6;
+    }
+
+    .show_hide {
+      position: fixed;
+      margin: 30px 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>college table</h1>
+  <div class="men_ex">
+    <ul>
+      <li><a id="student">student</a>
+        <table class="table_bg">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Rushita</td>
+            <td>22</td>
+            <td>rushitavaja22@gmail.com</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Yash</td>
+            <td>21</td>
+            <td>yashramani143@gmail.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Bhoomi</td>
+            <td>19</td>
+            <td>bhoomi12@gmail.com</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Krutika</td>
+            <td>23</td>
+            <td>krutika26@gmail.com</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>dhriyansh</td>
+            <td>20</td>
+            <td>dhriyu07@gmail.com</td>
+          </tr>
+
+        </table>
+        
+        <button class="hideoddrows">Hide rows</button>
+          <button class="showoddrows">Show rows</button>
+          <button class="hidecolumn">Hide columns</button>
+          <button class="showcolumn">Show columns</button>
+        </li>
+        <p>
+      <li><a id="teacher">teacher</a></p>
+        <table class="table_bg1">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Salary</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Rushita</td>
+            <td>22</td>
+            <td>rushitavaja22@gmail.com</td>
+            <td>55000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Yash</td>
+            <td>21</td>
+            <td>yashramani143@gmail.com</td>
+            <td>45000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Bhoomi</td>
+            <td>19</td>
+            <td>bhoomi12@gmail.com</td> 
+            <td>35000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Krutika</td>
+            <td>23</td>
+            <td>krutika26@gmail.com</td>
+            <td>30000</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>dhriyansh</td>
+            <td>20</td>
+            <td>dhriyu07@gmail.com</td>
+            <td>25000</td>
+          </tr>
+           
+
+          </tr>
+        </table>
+      </li>
+      <li><a id="other">other</a></li>
+
+    </ul>
+  </div>
+
+  <p><button class="hideoddrows">Hide rows</button>
+    <button class="showoddrows">Show rows</button> 
+    <button class="hidecolumn">Hide columns</button>
+    <button class="showcolumn">Show columns</button></p>
+
+</body>
+
+</html>
